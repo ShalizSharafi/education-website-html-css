@@ -1,0 +1,29 @@
+*{
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+}
+
+body{
+       width: 100%;
+       /* overflow-x: hidden; */
+       font-family: dmsans;
+}
+
+li{
+       list-style-type: none;
+}
+
+a{
+       text-decoration: none;
+       color: inherit;
+       &:visited{
+              color: inherit;
+       }
+}
+
+.row{
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+}
