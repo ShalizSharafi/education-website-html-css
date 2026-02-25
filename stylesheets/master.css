@@ -1890,3 +1890,101 @@ header {
     }
   }
 }
+
+/* footer. / / / // / / // / / // / // / / // / ////////////////////////////////////// */
+
+footer{
+  width: 100%;
+  min-height: 100px;
+  padding: 80px;
+  background-color: #fff;
+  display: flex;
+  .row{
+    /* border: 1px solid red; */
+    &:first-of-type{
+      width: 30%;
+      >*{
+        /* border: 1px solid red; */
+        width: 100%;
+      }
+      >figure{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        >img{
+          width: 40%;
+          object-fit: cover;
+        }
+      }
+      >p{
+        font-size: 16px;
+        font-weight: normal;
+        font-family: dmsans;
+        color: var(--color-gray-500);
+        /* width: 80%; */
+        line-height: 1.5;
+        padding: 10px 0;
+        padding-right: 50px;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+      }
+      >div{
+        display: flex;
+        align-items: start;
+        >i{
+          font-size: 26px;
+          color: var(--color-gray-600);
+          transition: .4s;
+          padding: 10px;
+          border-radius: 10px;
+          cursor: pointer;
+          &:hover{
+            background-color: rgba(128, 128, 128, 0.1);
+            color: var(--color-gray-900);
+          }
+        }
+      }
+    }
+    &:last-of-type{
+      width: 70%;
+      >*{
+        /* border: 1px solid green; */
+      }
+      >ul{
+        /* border: 1px solid red; */
+        width: 25%;
+        display: flex;
+        align-content: start;
+        flex-wrap: wrap;
+        padding: 20px;
+        >p{
+          /* border: 1px solid purple; */
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          font-family: spacegro;
+          color: black;
+          font-size: 15px;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin-bottom: 15px;
+        }
+        >li{
+          width: 100%;
+          /* border: 1px solid teal; */
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          color: var(--color-gray-500);
+          font-weight: normal;
+          text-transform: capitalize;
+          font-size: 16px;
+          margin-bottom: 15px;
+         
+        }
+      }
+    }
+  }
+}
