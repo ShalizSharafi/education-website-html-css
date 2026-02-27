@@ -68,7 +68,7 @@
 }
 
 /* copyright */
-.copyright {
+/* .copyright {
   width: 80px;
   height: 140px;
   border: 3px solid white;
@@ -88,7 +88,6 @@
      &:hover{
       &::after{
         opacity: 0;
-        /* left: -100%; */
         height: 0;
       }
       >div{
@@ -136,7 +135,6 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
     > i {
       font-size: 27px;
       color: transparent;
@@ -154,7 +152,82 @@
       }
     }
   }
+} */
+
+.copyright{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 200;
+  transform-style: preserve-3d;
+  transition:3s ;
+  transform: perspective(1000px) rotateY(135deg);
+  &:hover{
+    transform: rotate3d(1,1,1, -360deg);
+    /* transform: perspective(900px) rotateX(-45deg); */
+  }
+  >div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+   background-color: #ffffff9b;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+                  box-shadow:
+                    rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+                    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    >i{
+      font-size: 35px;
+      color: transparent;
+      background-image: linear-gradient(
+        135deg,
+        oklch(55% 0.14 180),
+        oklch(65% 0.18 40)
+      );
+      
+      background-clip: text;
+      z-index: 3;
+       &:hover{
+        color: oklch(65% 0.18 40);
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    }
+    &:nth-of-type(1){
+      transform: translateZ(30px);
+    }
+    &:nth-of-type(2){
+      transform: translateZ(-30px);
+    }
+    &:nth-of-type(3){
+      transform: translateZ(30px) rotateY(-90deg);
+      transform-origin: right;
+
+    }
+    &:nth-of-type(4){
+      transform: translateZ(-30px) rotateY(-90deg);
+      transform-origin:left ;
+    }
+    &:nth-of-type(5){
+      transform: translateZ(30px) rotateX(-90deg);
+      transform-origin: top;
+     
+    }
+    &:nth-of-type(6){
+      transform:translateZ(-30px) rotateX(-90deg) ;
+      transform-origin: bottom;
+    }
+  }
+
 }
+
+
+
 
 /* /header/////////////////////////////////// */
 
